@@ -1,0 +1,98 @@
+{% extends "base.html"%} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static './css/conocenos.css' %}">
+
+<nav id="navegador" class="nav">
+  <a href="{% url 'landing_page' %}">Inicio</a>
+  <a href="{% url 'productos' %}">Productos</a>
+  <a href="{% url 'conocenos' %}" class="activa">Conocenos</a>
+  <a href="{% url 'contacto' %}">Contacto</a>
+  <a href="#" id="btMenu" class="icon"><i id="icon-menu" class="fa-solid fa-bars"></i></a>
+</nav>
+<main>
+    <section>
+      <fieldset>  
+        <img src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera">
+        <h3>ALMA BICHERA</h3>
+        <p>Somos dos entusiastas emprendedoras que amamos a nuestras Mascotas. </p>
+        <p>Hace 6 años nos propusimos darles lo mejor, no solo cariño sino una
+          buena y sana alimentación, así nació <b>ALMA BICHERA - Tienda de Alimentos</b>.
+          Con el tiempo y el apoyo de nuestros clientes fuimos anexando todo lo necesario
+          para el cuidado de tu mimada mascota.</p>
+        <p>En 2022 fuimos por más, crecimos para atenderte mejor y en <b>ALMA BICCHERA II 
+          - Pet Shop</b> encontrarás todo lo que tu mascota necesita.</p>
+        <p>Dos locales con la misma atención personalizada de siempre.</p>
+      </fieldset>
+    </section>
+    <!-- EQUIPO -->
+    <section>
+      <fieldset>
+        <img src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera"> 
+        <h3>EQUIPO</h3>
+        <div class="contenedor-flex">
+          <!-- Jesi -->
+          <div class="tarjeta">
+            <img class="foto" src="{% static './media/jesi.png' %}" width="75" alt="Jesi" />
+            <h5>Jesi...</h5>
+            <p class="categoria">Propietaria</p>
+            <p>...</p>
+            <button id="btoPers1" class="contacto" title="Mostrar datos " onClick="verContactoNosotros('#btoPers1', '#iconBtoPers1', '#infoPers1')">
+              Contacto <i id="iconBtoPers1" class="fa-regular fa-eye"></i> 
+            </button>
+            <div id="infoPers1" hidden>
+              <span class="dato"><i class="fa-solid fa-mobile-screen-button"></i> 343 4525229</span>
+              <span class="dato"><i class="fa-regular fa-envelope"></i> yesibere15@gmail.com</span>
+              <span class="dato"><i class="fa-brands fa-whatsapp"></i></span>
+              <img class="dato-qr" src="{% static './media/alvaro_qr_code.png' %}" alt="QR whatsapp">  
+            </div>
+          </div>
+          <!-- Alejandra -->
+          <div class="tarjeta">
+            <img class="foto" src="{% static './media/ale.png' %}" width="75" alt="Ale" />
+            <h5>Alejandra</h5>
+            <p class="categoria">Propietaria</p>
+            <p>...</p>
+            <button id="btoPers2" class="contacto" title="Mostrar datos " onClick="verContactoNosotros('#btoPers2', '#iconBtoPers2', '#infoPers2')">
+              Contacto <i id="iconBtoPers2" class="fa-regular fa-eye"></i>
+            </button>
+            <div id="infoPers2" hidden>
+              <span class="dato"><i class="fa-solid fa-mobile-screen-button"></i> 343 4514764</span>
+              <span class="dato"><i class="fa-regular fa-envelope"></i> </span>
+              <span class="dato"><i class="fa-brands fa-whatsapp"></i></span>
+              <img class="dato-qr" src="{% static './media/alvaro_qr_code.png' %}" alt="QR whatsapp">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+    <!-- LOCALES -->
+    <section>
+      <fieldset>
+        <img src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera"> 
+        <h3>LOCALES</h3>
+        <div class="contenedor-flex">
+          <!-- Alma Bichera - Tienda de alimentos -->
+          <div class="tarjeta">
+            <h5>Alma Bichera</h5>
+            <p class="categoria">Tienda de Alimentos</p>
+            <img class="foto-loc" src="{% static './media/AB-local1.jpg' %}" width="150" alt="AlmaBichera" />
+            <p class="domi-loc"><i class="fa-solid fa-location-dot"></i> Condarco y Juan G. Miller</p>
+            <p class="domi-loc">3100 - Paraná</p>
+            <iframe class="mapa-local" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.571834790285!2d-60.53193942536097!3d-31.754886012695017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44d98d44dde69%3A0x3263b0fc5e6e86b8!2sJuan%20Guillermo%20Miller%20%26%20Condarco%2C%20Paran%C3%A1%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1684709667895!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!-- Alma Bichera - Pet Shop -->
+          <div class="tarjeta">
+            <h5>Alma Bichera II</h5>
+            <p class="categoria">Pet Shop</p>
+            <img class="foto-loc" src="{% static './media/AB-local2.jpg' %}" width="150" alt="AlmaBicheraII" />
+            <p class="domi-loc"><i class="fa-solid fa-location-dot"></i> General Alvarado 2447 Bis</p>
+            <p class="domi-loc">3100 - Paraná</p>
+            <iframe class="mapa-local" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.6036523708353!2d-60.533906025360956!3d-31.754017812652652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44d9eea7b25cf%3A0x10708a53df57cf8b!2sGral.%20Alvarado%202447%2C%20Paran%C3%A1%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1684710042269!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          
+        </div>
+      </fieldset>
+    </section>
+</main>
+
+<script src="{% static './js/conocenos.js' %}"></script>
+{% endblock %}

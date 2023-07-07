@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ titulo }}</title>
+  <link rel="icon" type="image/x-icon" href="{% static './media/almaBicheraIcom.png' %}">
+  <!-- Icons Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="{% static './css/styles.css' %}">
+</head>
+<body>
+  <header>
+    <div class="info-header">
+      <span class="tel"><i class="fa-solid fa-headset"></i> 343 4525229</span>
+      <span class="domi"><i class="fa-solid fa-location-dot"></i>
+        <span id="domiHeader"> Condarco & Juan G. Miller - Paraná</span> 
+      </span>
+    </div>
+    <img class="logo" src="{% static './media/almabichera.jpg' %}" alt="AlmaBichera">
+  </header>
+  
+  {% block content %}{% endblock %}
+
+  <footer>
+    <div class="centro">
+      <span class="f-reng">Derechos Reservados &COPY; 2023 </span><span class="f-sep"> - </span><span class="f-reng"> Alma Bichera </span>
+    </div>
+    <div class="redes centro">
+      <a href="https://www.facebook.com/alma.bicheraParana/" class="red"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/" class="red"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com/alma.bichera" class="red"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script src="{% static './js/base.js' %}"></script>
+   
+</body>
+</html>

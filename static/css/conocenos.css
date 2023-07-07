@@ -1,0 +1,150 @@
+section {
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section h3 {
+    text-align: center;
+    color: blue;
+}
+
+section p {
+    font-size: 0.8em;
+    text-align: justify;
+    padding-top: 5px;
+}
+
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta {
+    width: 40%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tarjeta img.foto {
+    border-radius: 5%;
+    margin: 0.8em 0 0 0;
+}
+
+.tarjeta img.foto-loc {
+    border-radius: 5%;
+    margin: 0.8em 0 0 0;
+}
+
+
+.tarjeta h5 {
+    font-weight: normal;
+    color: #0b6fe1;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.tarjeta p.categoria {
+    font-size: 0.6em;
+    font-style: italic;
+    text-align: center;
+}
+
+.tarjeta p {
+    font-size: 0.7em;
+    padding: 0 0.4em 0.4em 0.4em;
+    text-align: left;
+}
+
+button.contacto {
+    background-color: #5fbcff;
+    color: white;
+    border: 0;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+}
+
+button.contacto.act {
+    background-color: grey;
+    
+}
+
+button.contacto:hover {
+    background-color: #4086d7;
+}
+
+button.contacto i {
+    font-size: 0.7em;
+}
+
+span.dato {
+    display: block;
+    font-size: 11px;    
+}
+
+.dato-qr {
+    width: 50%;
+    transition: transform .2s;
+}
+
+.dato-qr:hover {
+    -ms-transform: scale(3); /* IE 9 */
+    -webkit-transform: scale(3); /* Safari 3-8 */
+    transform: scale(3) translate(0px, -40px);
+}
+
+.mapa-local {
+    width: 80%; 
+}
+
+p.domi-loc {
+    text-align: center;
+}
+
+/* --- MEDIA QUERY ---- */
+@media screen and (max-width: 767px) {
+    section {
+        width: 80%;
+    }
+    .persona {
+        width: 48%;
+    }
+    .dato-qr:hover {
+        -ms-transform: scale(3); /* IE 9 */
+        -webkit-transform: scale(3); /* Safari 3-8 */
+        transform: scale(3) translate(0px, -40px); 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dato-qr:hover {
+        -ms-transform: scale(4); /* IE 9 */
+        -webkit-transform: scale(4); /* Safari 3-8 */
+        transform: scale(4) translate(0px, -40px); 
+    }
+    .tarjeta img.foto-loc {
+        width: 80%;
+    }    
+}
+  
+@media screen and (max-width: 480px) {
+    section {
+        width: 90%;
+    }
+    .contenedor-flex {
+        flex-direction: column;
+    }
+    .tarjeta {
+        width: 98%;
+    }
+    .dato-qr:hover {
+        -ms-transform: scale(2); /* IE 9 */
+        -webkit-transform: scale(2); /* Safari 3-8 */
+        transform: scale(2) translate(0px, -40px); 
+        
+    }
+}

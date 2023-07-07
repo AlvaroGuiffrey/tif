@@ -1,0 +1,91 @@
+{% extends "base.html"%} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static './css/landing_page.css' %}">
+<link rel="stylesheet" href="{% static './css/apiOpenWeather.css' %}">
+
+<nav id="navegador" class="nav">
+    <a href="{% url 'landing_page' %}" class="activa">Inicio</a>
+    <a href="{% url 'productos' %}">Productos</a>
+    <a href="{% url 'conocenos' %}">Conocenos</a>
+    <a href="{% url 'contacto' %}">Contacto</a>
+    <a href="#" id="btMenu" class="icon"><i id="icon-menu" class="fa-solid fa-bars"></i></a>
+</nav>
+<main>
+    <section>
+      <article class="mensaje" id="mensaje">
+        <span class="texto-mens"><h2> ¡GRACIAS POR REGISTRARTE! </h2></span>
+      </article>
+      <article>
+        <div class="promo">
+          <img class="img-promo" src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera">
+          <button id="bt-reg" class="bt-reg"><i class="fa-solid fa-file-pen"></i> Registrate</button>
+          <button class="bt-promo">-10%</button>
+          <h2 class="com">En todos los alimentos para mascotas</h2>
+          <div id="titu" class="titu-promo"><i class="fa-solid fa-tags"></i> PROMO JULIO!!</div>
+        </div>
+      </article>
+      <h3>¡NUESTROS AMIGOS!</h3>
+      <article>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img class="imgSlide" src="{% static './media/amigo01.png' %}">
+          </div>
+          <div class="mySlides fade">
+            <img class="imgSlide" src="{% static './media/amigo02.png' %}">
+          </div>
+          <div class="mySlides fade">
+            <img class="imgSlide" src="{% static './media/amigo03.png' %}">
+          </div>
+          <div class="mySlides fade">
+            <img class="imgSlide" src="{% static './media/amigo04.png' %}">
+          </div>
+          <div class="mySlides fade">
+            <img class="imgSlide" src="{% static './media/amigo05.png' %}">
+          </div>
+        </div>
+      </article>
+    </section>
+    <aside>
+      <div class="titulo-clima">
+        <img class="img-clima" src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera">  
+        <h3>¡DALE, ME PASIAS!</h3>
+      </div>
+      <div class="container-clima"></div>
+      <div class="titulo-exp">
+        <img class="img-exp" src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera">  
+        <h3>EXPERIENCIAS</h3>
+      </div>
+      <div id="contenedorCard"></div>
+    </aside>
+
+    <!-- MODAL REGISTRO -->
+    <div id="formReg" class="modal">
+      <button id="bt-close" class="bt-close"><i class="fa-solid fa-circle-xmark"></i> CERRAR</button>
+      <div class="contenedorForm">
+        <h1>¡SI, ME REGISTRO!</h1>
+        <div class="formulario">
+          <form id="formPromo" action="/">
+            <label for="nombre">Apellido y nombres</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Su nombre.." required>
+            <label for="celular">Nro Celular</label>
+            <input type="tel" id="celular" name="celular" placeholder="Su número.." required>
+            <label for="email">E-mail</label>
+            <input type="text" id="mail" name="mail" placeholder="Su e-mail.." required>
+            <label for="mascota">Tu mascota</label>
+            <input type="text" id="mascota" name="mascota" placeholder="Tu mascota.." required>
+            <div class="botones">
+              <button type="reset" id="btBorrar"><i class="fa-solid fa-eraser"></i> Borrar</button>
+              <button type="submit" id="btEnviar"><i class="fa-regular fa-paper-plane"></i> Enviar</button>
+            </div>
+          </form>
+          <div id="mensError" class="mensForm">
+            <span id="textoError"></span>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="{% static './js/landing_page.js' %}"></script>
+  <script type="module" src="{% static './js/apiOWeather.js' %}"></script>
+
+{% endblock %}

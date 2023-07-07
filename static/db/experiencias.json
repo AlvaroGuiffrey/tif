@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Christian S",
+        "puntaje": 5,
+        "comentario": "Mi gatita FER... ¡Feliz!."
+    },
+    {
+        "id": 2,
+        "nombre": "Jorge Daniel",
+        "puntaje": 4,
+        "comentario": "Muy buena atención. Excelente!!!."
+    },
+    {
+        "id": 3,
+        "nombre": "José Robles",
+        "puntaje": 5,
+        "comentario": "Muy completo!!!. Hay de todo para nuestras mascotas."
+    },
+    {
+        "id": 4,
+        "nombre": "Carlos J",
+        "puntaje": 2,
+        "comentario": "Humm! Estaba cerrado."
+    },
+    {
+        "id": 5,
+        "nombre": "Mariela Sanchez",
+        "puntaje": 4,
+        "comentario": "Aprendí!!. Me asesoraron sobre alimentación saludable."
+    },
+    {
+        "id": 6,
+        "nombre": "Roberto",
+        "puntaje": 3,
+        "comentario": "No fue lo esperado. A mi perro no le gustó el alimento."
+    }
+]

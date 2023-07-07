@@ -1,0 +1,27 @@
+{% extends "base.html"%} {% load static %} {% block content %}
+
+<link rel="stylesheet" href="{% static './css/productos.css' %}">
+
+<nav id="navegador" class="nav">
+    <a href="{% url 'landing_page' %}">Inicio</a>
+    <a href="{% url 'productos' %}" class="activa">Productos</a>
+    <a href="{% url 'conocenos' %}">Conocenos</a>
+    <a href="{% url 'contacto' %}">Contacto</a>
+    <a href="#" id="btMenu" class="icon"><i id="icon-menu" class="fa-solid fa-bars"></i></a>
+</nav>
+<main>
+    <section>
+      <fieldset>
+        <img src="{% static './media/almaBicheraIcom.png' %}" alt="IconoAlmaBichera">
+        <h3>ALIMENTOS BALANCEADOS</h3>
+        <div>
+          <div id="contenedorCard" class="contenedor-flex">
+
+          </div>
+        </div>
+      </fieldset>
+    </section>  
+  </main>
+
+  <script type="module" src="{% static './js/productos.js' %}"></script>
+{% endblock %}
