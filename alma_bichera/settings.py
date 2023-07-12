@@ -29,6 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+APPS = [
+    'app_alma_bichera'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+INSTALLED_APPS += APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
